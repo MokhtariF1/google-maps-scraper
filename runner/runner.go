@@ -333,14 +333,6 @@ func banner(messages []string, width int) string {
 }
 
 func AppendBrowserCapacityOptions(opts []func(*scrapemateapp.Config) error, cfg *Config) []func(*scrapemateapp.Config) error {
-	if cfg.MaxPagesPerBrowser > 1 {
-		opts = append(opts, scrapemateapp.WithMaxPagesPerBrowser(cfg.MaxPagesPerBrowser))
-	}
-
-	if cfg.BrowserPoolSize > 0 {
-		opts = append(opts, scrapemateapp.WithBrowserPoolSize(cfg.BrowserPoolSize))
-	}
-
 	return opts
 }
 
